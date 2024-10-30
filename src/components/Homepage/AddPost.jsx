@@ -24,17 +24,17 @@ const AddPost = () => {
 
             // Создаем форму для загрузки файла
             const formData = new FormData();
-            formData.append('file', file);
+            formData.append('files', file);
 
             // Загрузка файла на сервер
-            const uploadResponse = await axios.post('http://localhost:8080/api/upload/photo', formData, {
+            const uploadResponse = await axios.post('http://localhost:8080/upload', formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data'
                 }
             });
 
-            const uploadedImageUrl = "http://localhost:8080" + uploadResponse.data;  // Получаем URL изображения
+            const uploadedImageUrl = "" + uploadResponse.data;  // Получаем URL изображения
 
             // Отправляем данные поста с URL изображения
             const postResponse = await axios.post('http://localhost:8080/api/post/create', {

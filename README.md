@@ -44,7 +44,7 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone this repository.
 2. Navigate to the `backend` directory and run `./mvnw spring-boot:run` to start the Spring Boot server.
-3. Navigate to the `frontend` directory and run `npm install` followed by `npm start` to start the React development server.
+3. Navigate to the `frontend` directory and run `npm install` followed by `npm run dev` to start the React development server.
 4. Access the application at `http://localhost:5173` in your web browser.
 
 ## Usage
